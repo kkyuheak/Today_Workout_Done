@@ -48,7 +48,7 @@ export default function Main() {
   const category = [
     { title: "👋 오운완 인증 최신글", body: posts },
     { title: "💪 프로틴 추천 최신글", body: proteinPosts },
-    { title: "✅ 루틴 공유 최신글", body: routinePosts },
+    { title: "✅ 식단 공유 최신글", body: routinePosts },
     { title: "🏋️‍♂️ 헬스장 후기 최신글", body: gymreviewPosts },
   ];
 
