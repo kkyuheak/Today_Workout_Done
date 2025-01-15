@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import FollowButton from "../FollowButton";
-import UserProfile from "../UserProfile";
+import FollowButton from "../common/FollowButton";
+import UserProfile from "../common/UserProfile";
 import { updateNameFn } from "../../utils/updateName";
 import { Following, useAuth } from "../../stores/authStore";
 

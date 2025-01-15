@@ -1,17 +1,15 @@
 import UserBox from "./UserBox";
-import closeIcon from "../../assets/close.svg";
-import darkCloseIcon from "../../assets/darkicons/darkClose.svg";
-import searchIcon from "../../assets/searchIcon.svg";
-import darkSearchIcon from "../../assets/darkicons/darkSearchIcon.svg";
+import closeIcon from "../../../../assets/close.svg";
+import darkCloseIcon from "../../../../assets/darkicons/darkClose.svg";
+import searchIcon from "../../../../assets/searchIcon.svg";
+import darkSearchIcon from "../../../../assets/darkicons/darkSearchIcon.svg";
 import { useEffect, useState } from "react";
 import UserNone from "./UserNone";
-import { getUserList, UserListType } from "../../utils/getUserList";
-import { searchUserFn, SearchUserType } from "../../utils/searchUser";
-import { usesidebarToggleStore } from "../../stores/sideberToggleStore";
-import Lottie from "react-lottie-player";
-import lottieJson from "../../assets/lottie/loading-b.json";
-import { twMerge } from "tailwind-merge";
-import { useDarkModeStore } from "../../stores/darkModeStore";
+import { getUserList, UserListType } from "../../../../utils/getUserList";
+import { searchUserFn, SearchUserType } from "../../../../utils/searchUser";
+import { usesidebarToggleStore } from "../../../../stores/sideberToggleStore";
+import { useDarkModeStore } from "../../../../stores/darkModeStore";
+import UserListLoading from "./UserListLoading";
 
 interface UserListModalType {
   handleBackClick: (e: React.MouseEvent<HTMLDivElement>) => void;
@@ -88,6 +86,20 @@ export default function UserListModal({
     };
   }, [searchUser]);
 
+  // 모달창 띄워졌을 때 스크롤 막아주기
+  useEffect(() => {
+    document.body.style.cssText = `
+    position: fixed; 
+    top: -${window.scrollY}px;
+    overflow-y: scroll;
+    width: 100%;`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = "";
+      window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+    };
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchUser(e.target.value);
   };
@@ -119,7 +131,7 @@ export default function UserListModal({
             <img src={darkCloseIcon} alt="다크모드 닫기 버튼" />
           )}
         </div>
-        <div className="relative flex justify-center items-center mt-4">
+        <div className="relative flex items-center justify-center mt-4">
           <input
             className="px-5 py-2 w-[320px] rounded-[25px] border border-[rgb(208, 208, 208)]
             outline-none dark:bg-[#373737] dark:border-[#fff] dark:text-[#fff] dark:placeholder:text-[#bdbdbd]
@@ -132,29 +144,12 @@ export default function UserListModal({
           <img
             src={!isDark ? searchIcon : darkSearchIcon}
             alt="검색 아이콘"
-            className="absolute  right-4"
+            className="absolute right-4"
           />
         </div>
-        <div
-          className="w-full h-full overflow-scroll flex flex-col justify-start
-        items-center gap-4 scrollbar-none relative
-        "
-        >
+        <div className="relative flex flex-col items-center justify-start w-full h-full gap-4 overflow-scroll scrollbar-none ">
           {/* 로딩중 */}
-          {status === "loading" && (
-            <div
-              className={twMerge(
-                "absolute z-20 flex justify-center items-center w-full h-full bg-white/80 dark:bg-lightBlackDark/50"
-              )}
-            >
-              <Lottie
-                className="w-[130px] h-[130px]"
-                loop
-                animationData={lottieJson}
-                play
-              />
-            </div>
-          )}
+          {status === "loading" && <UserListLoading />}
 
           {status === "searching" &&
             (getUser?.length ? (
@@ -191,18 +186,7 @@ export default function UserListModal({
                   )
               )
             ) : (
-              <div
-                className={twMerge(
-                  "absolute z-20 flex justify-center items-center w-full h-full bg-white/80 dark:bg-lightBlackDark/50"
-                )}
-              >
-                <Lottie
-                  className="w-[130px] h-[130px]"
-                  loop
-                  animationData={lottieJson}
-                  play
-                />
-              </div>
+              <UserListLoading />
             ))}
 
           {/* 초기 렌더링 오류 */}

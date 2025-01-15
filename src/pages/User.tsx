@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { api } from "../api/axios";
 import UserInfoCard from "../components/User/UserInfoCard";
-import ImageCard from "../components/ImageCard";
+import ImageCard from "../components/common/ImageCard";
 
 export default function User() {
   const { user_id } = useParams();

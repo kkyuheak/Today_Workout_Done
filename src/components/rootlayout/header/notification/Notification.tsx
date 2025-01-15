@@ -1,22 +1,22 @@
-import ButtonComponent from "../ButtonComponent";
-import likeIcon from "../../assets/noti_like_Icon.svg";
-import followIcon from "../../assets/noti_follow_Icon.svg";
-import commentIcon from "../../assets/icons/Comment_Icon.svg";
-import action_comment from "../../assets/icons/action_comment.svg";
-import action_noti_follow from "../../assets/icons/action_noti_follow.svg";
-import action_noti_like from "../../assets/icons/action_noti_like.svg";
-
-import NotificationBox from "../NotificationBox";
-import { api } from "../../api/axios";
+import { api } from "../../../../api/axios";
 import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
+import { useAuth } from "../../../../stores/authStore";
+import { twMerge } from "tailwind-merge";
+import ButtonComponent from "../../../common/ButtonComponent";
+import NotificationBox from "./NotificationBox";
+// 아이콘
+import likeIcon from "../../../../assets/noti_like_Icon.svg";
+import followIcon from "../../../../assets/noti_follow_Icon.svg";
+import commentIcon from "../../../../assets/icons/Comment_Icon.svg";
+import action_comment from "../../../../assets/icons/action_comment.svg";
+import action_noti_follow from "../../../../assets/icons/action_noti_follow.svg";
+import action_noti_like from "../../../../assets/icons/action_noti_like.svg";
 
 // import darkCommentIcon from "../../assets/darkicons/darkCommentIcon.svg";
 // import darkFollowIcon from "../../assets/darkicons/darkFollowIcon.svg";
 // import darkLikeIcon from "../../assets/darkicons/darkLikeIcon.svg";
 // import { useDarkModeStore } from "../../stores/darkModeStore";
-import { useAuth } from "../../stores/authStore";
-import { twMerge } from "tailwind-merge";
 
 interface notificationProps {
   closeNoti: () => void;

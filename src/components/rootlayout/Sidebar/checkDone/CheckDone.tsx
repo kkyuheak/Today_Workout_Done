@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "../../stores/authStore";
+import { useAuth } from "../../../../stores/authStore";
 import CheckDoneMonth from "./CheckDoneMonth";
 import DoneProgressBar from "./DoneProgressBar";
-import { channelMapping } from "../../constants/channel";
+import { channelMapping } from "../../../../constants/channel";
 import moment from "moment";
 
 interface CheckDoneType {

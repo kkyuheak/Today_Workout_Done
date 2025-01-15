@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 // import { api } from "../api/axios";
-import SearchBar from "../components/SearchBar";
-import Review from "../components/Review";
+import SearchBar from "../components/board/SearchBar";
+import Review from "../components/board/Review";
 import { useLocation } from "react-router";
 // import { channelMapping } from "../constants/channel";
 import { useLoadingStore } from "../stores/loadingStore";
-import Loading from "../components/Loading";
+import Loading from "../components/common/Loading";
 import { getChannelPost } from "../utils/api/getChannelPost";
-import InfinityLoading from "../components/InfinityLoading";
+import InfinityLoading from "../components/board/InfinityLoading";
 import { twMerge } from "tailwind-merge";
 
 // 무한스크롤에서 몇개씩 보여줄지 선택

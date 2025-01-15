@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { useAuth } from "../stores/authStore";
-import { follow, unfollow } from "../utils/followFn";
+import { useAuth } from "../../stores/authStore";
+import { follow, unfollow } from "../../utils/followFn";
 
 export default function FollowButton({
   width,

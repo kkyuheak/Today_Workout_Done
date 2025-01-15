@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
-import horizontalAfternoon from "../../assets/horizontalAfternoon.svg";
-import horizontalNight from "../../assets/horizontalNight.svg";
-import sun from "../../assets/sun.svg";
-import moon from "../../assets/moon.svg";
-import innercircle from "../../assets/innercircle.svg";
-import { useDarkModeStore } from "../../stores/darkModeStore";
+import { useDarkModeStore } from "../../../stores/darkModeStore";
+
+// 아이콘
+import horizontalAfternoon from "../../../assets/horizontalAfternoon.svg";
+import horizontalNight from "../../../assets/horizontalNight.svg";
+import sun from "../../../assets/sun.svg";
+import moon from "../../../assets/moon.svg";
+import innercircle from "../../../assets/innercircle.svg";
 
 export default function ModeChange() {
   // 다크모드

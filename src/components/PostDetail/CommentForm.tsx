@@ -2,7 +2,7 @@ import likeIcon from "../../assets/like_icon.svg";
 import likeFill from "../../assets/icons/like_fill_icon.svg";
 import chatIcon from "../../assets/chat_icon_black.svg";
 import darkCommentIcon from "../../assets/darkicons/darkChatIcon.svg";
-import ButtonComponent from "../ButtonComponent";
+import ButtonComponent from "../common/ButtonComponent";
 import { Comment } from "../../utils/getPostDetail";
 import { useAuth } from "../../stores/authStore";
 import { useDarkModeStore } from "../../stores/darkModeStore";

@@ -1,13 +1,14 @@
 import { twMerge } from "tailwind-merge";
-import defaultUser from "../assets/defaultUser.svg";
-import profileEdit from "../assets/profile-edit.svg";
-import home from "../assets/icons/home_icon.svg";
 import { useRef } from "react";
-import { updateUserImg } from "../utils/updateUserImg";
-import { useLoadingStore } from "../stores/loadingStore";
-import { useAuth } from "../stores/authStore";
-import { useDarkModeStore } from "../stores/darkModeStore";
-import darkProfileEdit from "../assets/darkicons/darkProfileEdit.svg";
+import { updateUserImg } from "../../utils/updateUserImg";
+import { useLoadingStore } from "../../stores/loadingStore";
+import { useAuth } from "../../stores/authStore";
+import { useDarkModeStore } from "../../stores/darkModeStore";
+// 아이콘
+import defaultUser from "../../assets/defaultUser.svg";
+import profileEdit from "../../assets/profile-edit.svg";
+import home from "../../assets/icons/home_icon.svg";
+import darkProfileEdit from "../../assets/darkicons/darkProfileEdit.svg";
 
 export default function UserProfile({
   edit,

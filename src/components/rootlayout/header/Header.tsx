@@ -1,19 +1,19 @@
 import { useNavigate } from "react-router";
-import notifyIcon from "../../assets/notifyIcon.svg";
+import notifyIcon from "../../../assets/notifyIcon.svg";
 import { twMerge } from "tailwind-merge";
-import logoImg from "../../assets/loge.svg";
-import UserProfile from "../UserProfile";
-import ButtonComponent from "../ButtonComponent";
-import { useAuth } from "../../stores/authStore";
+import logoImg from "../../../assets/loge.svg";
+import UserProfile from "../../common/UserProfile";
+import ButtonComponent from "../../common/ButtonComponent";
+import { useAuth } from "../../../stores/authStore";
 import { useState } from "react";
-import Notification from "../notification/Notification";
-import { useToken } from "../../stores/tokenStore";
-import ModeChange from "../button/ModeChange";
-import bars from "../../assets/icons/bars.svg";
-import close from "../../assets/icons/close-icon.svg";
-import { useDarkModeStore } from "../../stores/darkModeStore";
-import darkNotifyIcon from "../../assets/darkicons/darkNotifyIcon.svg";
-import darkMainLogo from "../../assets/darkicons/darkMainLogo.svg";
+import Notification from "./notification/Notification";
+import { useToken } from "../../../stores/tokenStore";
+import bars from "../../../assets/icons/bars.svg";
+import close from "../../../assets/icons/close-icon.svg";
+import { useDarkModeStore } from "../../../stores/darkModeStore";
+import darkNotifyIcon from "../../../assets/darkicons/darkNotifyIcon.svg";
+import darkMainLogo from "../../../assets/darkicons/darkMainLogo.svg";
+import ModeChange from "./ModeChange";
 
 // 사이드바 접힐때 로고 보이도록 처리하자
 export default function Header({
@@ -50,14 +50,6 @@ export default function Header({
   // Todo : 알림창 폼 보여줄지 분기처리
   const [showNoti, setShowNoti] = useState(false);
 
-  // 아래 주석 없어도 작동 가능
-  // // 모두읽음 누르면 값 처리해서 뱃지 없애기
-  // const [isNoti, setIsNoti] = useState(true);
-
-  // const setIsNotiHandler = () => {
-  //   setIsNoti(false);
-  // };
-
   const showNotiHandler = () => {
     setShowNoti(!showNoti);
   };
@@ -68,7 +60,7 @@ export default function Header({
   return (
     <header
       className={twMerge(
-        "h-[70px] flex items-center justify-end py-[20px] dark:bg-lightBlackDark",
+        "h-[70px] w-full flex items-center justify-end fixed left-0 top-0 z-10 bg-white dark:bg-lightBlackDark laptop:pl-[36px]",
         logo ? "justify-between" : "justify-end",
         sidebar ? "pl-[100px] pr-[36px]" : "px-[36px]",
         isActive && "on"

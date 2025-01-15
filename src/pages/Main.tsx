@@ -3,7 +3,7 @@ import { api } from "../api/axios";
 import SwiperCustom from "../components/main/SwiperCustom";
 import BmiCon from "../components/main/BmiCon";
 import { useLoadingStore } from "../stores/loadingStore";
-import Loading from "../components/Loading";
+import Loading from "../components/common/Loading";
 
 export default function Main() {
   // 로딩 관리

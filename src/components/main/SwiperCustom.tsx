@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Virtual } from "swiper/modules";
-import ImageCard from "../ImageCard";
+import ImageCard from "../common/ImageCard";
 import { useDarkModeStore } from "../../stores/darkModeStore";
 
 export default function SwiperCustom({ posts }: { posts: PostType[] }) {

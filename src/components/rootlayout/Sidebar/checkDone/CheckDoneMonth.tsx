@@ -1,4 +1,4 @@
-import { useAuth } from "../../stores/authStore";
+import { useAuth } from "../../../../stores/authStore";
 
 interface CheckDoneMonthType {
   checkNumber: number;

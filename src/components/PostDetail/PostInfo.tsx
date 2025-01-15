@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import UserProfile from "../UserProfile";
+import UserProfile from "../common/UserProfile";
 import { updatePost } from "../../utils/updatePost";
 import { deletePost } from "../../utils/api/deletePosts";
 import { useNavigate } from "react-router";

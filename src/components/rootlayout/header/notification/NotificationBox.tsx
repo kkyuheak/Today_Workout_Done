@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
-import defaultUserImg from "../assets/defaultUser.svg";
-import { api } from "../api/axios";
-import { channelMapping } from "../constants/channel";
+import { api } from "../../../../api/axios";
+import { channelMapping } from "../../../../constants/channel";
+
+import defaultUserImg from "../../../../assets/defaultUser.svg";
 
 interface NotificationBoxPropsType {
   fullname: string;

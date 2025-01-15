@@ -9,7 +9,7 @@ import { useAuth } from "../stores/authStore";
 import CommentSec from "../components/PostDetail/CommentSec";
 import { useLocation, useNavigate, useParams } from "react-router";
 import { useLoadingStore } from "../stores/loadingStore";
-import Loading from "../components/Loading";
+import Loading from "../components/common/Loading";
 import { useDarkModeStore } from "../stores/darkModeStore";
 import { twMerge } from "tailwind-merge";
 

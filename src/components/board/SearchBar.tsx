@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
-import searchIcon from "../assets/searchIcon.svg";
-import darkSearchIcon from "../assets/darkicons/darkSearchIcon.svg";
-import { useDarkModeStore } from "../stores/darkModeStore";
+import searchIcon from "../../assets/searchIcon.svg";
+import darkSearchIcon from "../../assets/darkicons/darkSearchIcon.svg";
+import { useDarkModeStore } from "../../stores/darkModeStore";
 import { useEffect } from "react";
 
 export default function SearchBar({

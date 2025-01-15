@@ -5,7 +5,7 @@ import PostStatus from "../components/posting/PostStatus";
 import { postingFn } from "../utils/postingFn";
 import { useNavigate } from "react-router";
 import { useLoadingStore } from "../stores/loadingStore";
-import Loading from "../components/Loading";
+import Loading from "../components/common/Loading";
 import { useDarkModeStore } from "../stores/darkModeStore";
 import darkDownIcon from "../assets/darkicons/darkDown.svg";
 
