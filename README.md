@@ -14,7 +14,6 @@
 - 프로젝트 기간 : 2024.12.05 - 2024.12.23
 - 배포 주소 : 🔗[!O운완 ?O운완](https://workoutdone.netlify.app/)
 - 시연 영상 : 🔗[시연 영상](https://www.youtube.com/watch?v=hqkzGfIKzKQ)
-- 발표 자료 : 🔗[발표자료](https://drive.google.com/file/d/11MWfrNHX4UL63jxMdEfZ61SB-YJ_N_qu/view)
 
 <br/>
 
