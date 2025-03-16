@@ -1,7 +1,7 @@
 import Lottie from "react-lottie-player";
-import lottieJson from "../assets/lottie/loading-b.json";
+import lottieJson from "../../assets/lottie/loading-b.json";
 import { twMerge } from "tailwind-merge";
-import { useLoadingStore } from "../stores/loadingStore";
+import { useLoadingStore } from "../../stores/loadingStore";
 
 export default function Loading() {
   const isLoading = useLoadingStore((state) => state.isLoading);

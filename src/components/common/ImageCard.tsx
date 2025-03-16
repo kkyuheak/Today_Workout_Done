@@ -1,11 +1,11 @@
-import thumbnail from "../assets/images/feed_thumbnail.jpg";
-import likeIcon from "../assets/like_icon.svg";
-import likeFill from "../assets/icons/like_fill_icon.svg";
-import chatIcon from "../assets/chat_icon.svg";
+import thumbnail from "../../assets/images/feed_thumbnail.jpg";
+import likeIcon from "../../assets/like_icon.svg";
+import likeFill from "../../assets/icons/like_fill_icon.svg";
+import chatIcon from "../../assets/chat_icon.svg";
 import UserProfile from "./UserProfile";
 import { useLocation, useNavigate } from "react-router";
-import { channelMapping } from "../constants/channel";
-import { useAuth } from "../stores/authStore";
+import { channelMapping } from "../../constants/channel";
+import { useAuth } from "../../stores/authStore";
 
 export default function ImageCard({
   image,

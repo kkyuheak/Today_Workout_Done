@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import Header from "../components/rootlayout/Header";
+import Header from "../components/rootlayout/header/Header";
 import { useDarkModeStore } from "../stores/darkModeStore";
 import darkAuthBgImg from "../assets/darkicons/darkAuthBgImg.svg";
 import lightAuthBhImg from "../assets/lightAuthBgImg.svg";

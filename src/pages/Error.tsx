@@ -1,5 +1,5 @@
 import ErrorImg from "../assets/ErrorImg.svg";
-import Header from "../components/rootlayout/Header";
+import Header from "../components/rootlayout/header/Header";
 
 export default function Error() {
   return (

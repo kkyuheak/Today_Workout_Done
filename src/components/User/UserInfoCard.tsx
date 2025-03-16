@@ -1,4 +1,4 @@
-import FollowButton from "../FollowButton";
+import FollowButton from "../common/FollowButton";
 import { useAuth } from "../../stores/authStore";
 import defaultUserImg from "../../assets/defaultUser.svg";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import UserProfile from "../UserProfile";
+import UserProfile from "../common/UserProfile";
 import trashIcon from "../../assets/trash.svg";
 import darkTrashIcon from "../../assets/darkicons/darkTrashIcon.svg";
 import { Comment } from "../../utils/getPostDetail";

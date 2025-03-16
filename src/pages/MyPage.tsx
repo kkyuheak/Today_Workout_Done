@@ -1,13 +1,13 @@
 import { useAuth } from "../stores/authStore";
 import { useLoadingStore } from "../stores/loadingStore";
 import UserCard from "../components/User/UserCard";
-import CheckDone from "../components/checkDone/CheckDone";
-import Loading from "../components/Loading";
+import CheckDone from "../components/rootlayout/Sidebar/checkDone/CheckDone";
+import Loading from "../components/common/Loading";
 import CustomCalendar from "../components/MyPage/CustomCalendar";
 import { useEffect, useState } from "react";
 import { usesidebarToggleStore } from "../stores/sideberToggleStore";
 import { twMerge } from "tailwind-merge";
-import ImageCard from "../components/ImageCard";
+import ImageCard from "../components/common/ImageCard";
 export default function MyPage() {
   // 토글 유무 확인
   const isToggle = usesidebarToggleStore((state) => state.isToggle);

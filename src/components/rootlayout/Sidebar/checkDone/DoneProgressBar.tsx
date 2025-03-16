@@ -1,6 +1,6 @@
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { useDarkModeStore } from "../../stores/darkModeStore";
+import { useDarkModeStore } from "../../../../stores/darkModeStore";
 
 interface DoneProgressBar {
   checkNumber: number;

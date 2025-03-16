@@ -1,12 +1,12 @@
-import thumbnail from "../assets/images/feed_thumbnail.jpg";
-import likeIcon from "../assets/like_icon.svg";
-import likeFillIcon from "../assets/icons/like_fill_icon.svg";
-import chatIcon from "../assets/chat_icon_black.svg";
-import UserProfile from "./UserProfile";
+import thumbnail from "../../assets/images/feed_thumbnail.jpg";
+import likeIcon from "../../assets//like_icon.svg";
+import likeFillIcon from "../../assets//icons/like_fill_icon.svg";
+import chatIcon from "../../assets//chat_icon_black.svg";
+import UserProfile from "../common/UserProfile";
 import { useNavigate } from "react-router";
-import { useAuth } from "../stores/authStore";
-import { useDarkModeStore } from "../stores/darkModeStore";
-import darkChatIcon from "../assets/chat_icon.svg";
+import { useAuth } from "../../stores/authStore";
+import { useDarkModeStore } from "../../stores/darkModeStore";
+import darkChatIcon from "../../assets/chat_icon.svg";
 
 export default function Review({
   image,

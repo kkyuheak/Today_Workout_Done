@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import defaultUserImg from "../../assets/defaultUser.svg";
-import FollowButton from "../FollowButton";
-import { useAuth } from "../../stores/authStore";
+import defaultUserImg from "../../../../assets/defaultUser.svg";
+import FollowButton from "../../../common/FollowButton";
+import { useAuth } from "../../../../stores/authStore";
 import { useState } from "react";
 
 interface UserBoxPropsType {
@@ -53,7 +53,7 @@ export default function UserBox({
 
       {/* 유저  info*/}
       <div className="flex-1 dark:text-[#fff]">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <p className="font-bold text-[15px]">{fullname}</p>
           {isLogin && (
             <FollowButton

@@ -1,4 +1,4 @@
-import lottieJson from "../assets/lottie/loading-b.json";
+import lottieJson from "../../assets/lottie/loading-b.json";
 import Lottie from "react-lottie-player";
 
 export default function InfinityLoading() {
